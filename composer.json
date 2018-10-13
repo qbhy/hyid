@@ -1,0 +1,19 @@
+{
+    "name": "96qbhy/hyid",
+    "description": "hidden your id",
+    "authors": [
+        {
+            "name": "96qbhy",
+            "email": "96qbhy@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Qbhy\\Hyid\\": "src"
+        }
+    },
+    "require-dev": {
+        "laravel/lumen-framework": "5.5"
+    }
+}
