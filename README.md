@@ -23,6 +23,7 @@ class User extends Model{
         return hyid($userId);
     }
     
+    // or
     public function toArray(){
         $data = parent::toArray();
 
