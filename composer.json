@@ -15,5 +15,12 @@
     },
     "require-dev": {
         "laravel/lumen-framework": "5.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Qbhy\\Hyid\\ServiceProvider"
+            ]
+        }
     }
 }
