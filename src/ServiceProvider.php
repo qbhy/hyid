@@ -34,7 +34,7 @@ class ServiceProvider extends BaseProvider
         $this->setupConfig();
 
         $this->app->singleton(Hyid::class, function () {
-            return new Hyid(config('hyid.secret'), config('hyid.offset'));
+            return new Hyid(config('hyid.secret'), config('hyid.offset'), config('hyid.randomLength', 4));
         });
 
         $this->app->alias(Hyid::class, 'hyid');

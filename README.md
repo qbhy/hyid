@@ -14,6 +14,14 @@ hidden your id. 隐藏你的ID.
 
 
 ## 使用
+### 配置
+```text
+HYID_SECRET=qbhy
+HYID_OFFSET=1996
+HYID_RANDOM_LENGTH=6
+```
+> .env , HYID_RANDOM_LENGTH 值建议不超过 6
+### 代码示例
 ```php
 class User extends Model{
     use Qbhy\Hyid\HyidAble;
@@ -33,16 +41,24 @@ class User extends Model{
     }
 }
 // decode
-    public function userinfo($id){
+```
+#### 解码后得到原始的ID
+```php
+ public function userinfo($id){
         return User::query()->findOrFail(hyid()->decode($id))->toArray();
-    }
+ }
+```
+> UserController
+
+#### 非 laravel 或者 lumen 环境下使用
+```php
 // 非 laravel or lumen 下，可以自行实例化 Hyid 类
 $secret = 'qbhy';
 $offset = 1996;
-$hyid = new Hyid($secret,$offset);
+$hyid = new Hyid($secret,$offset,4);
 
 $encodedId = $hyid->encode(1);
-$id = $hyid->decode($encodedId);
+$id = $hyid->decode($encodedId); // 1
 ```
 
 96qbhy@gmail.com  

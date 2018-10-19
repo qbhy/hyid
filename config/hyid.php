@@ -6,6 +6,7 @@
  */
 
 return [
-    'secret' => env('HYID_SECRET'),
-    'offset' => env('HYID_OFFSET'),
+    'secret'       => env('HYID_SECRET'),
+    'offset'       => env('HYID_OFFSET'),
+    'randomLength' => env('HYID_RANDOM_LENGTH', 4),
 ];
