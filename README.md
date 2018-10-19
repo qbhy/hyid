@@ -6,7 +6,7 @@ hidden your id. 隐藏你的ID.
  `hyid` 可以帮助你隐藏我们不希望用户看到的ID字段，或者其他数字字段。
  
 ## 安装
-`composer require 96qby/hyid`
+`composer require 96qbhy/hyid`
 
 ### laravel or lumen
 1. 注册服务提供者 : `Qbhy\Hyid\ServiceProvider::class`
