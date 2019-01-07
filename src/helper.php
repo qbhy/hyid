@@ -22,7 +22,7 @@ if (!function_exists('hyid')) {
             return $hyid;
         }
 
-        return $hyid->encode(intval($id));
+        return $hyid->encode((int) $id);
     }
 }
 
