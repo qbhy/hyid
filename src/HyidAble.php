@@ -17,9 +17,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 trait HyidAble
 {
-    public function getIdAttribute($id)
+    public function getHyidAttribute()
     {
-        return hyid($id);
+        return hyid($this->attributes['id']);
     }
 
     public function rawId()

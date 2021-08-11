@@ -1,5 +1,5 @@
 # hyid
-hidden your id. 隐藏你的ID.
+hide your id. 隐藏你的ID.
 
 ## 使用场景
 当我们的应用需要提供一个无状态通过ID获取信息的接口，例如 `GET /user/{id}` ，此类接口只要递增ID进行请求，就可以得到我们数据库中所有公开信息，这很显然不是我们想看到的。
@@ -20,7 +20,7 @@ HYID_SECRET=qbhy
 HYID_OFFSET=1996
 HYID_RANDOM_LENGTH=6
 ```
-> .env , HYID_RANDOM_LENGTH 值建议不超过 6
+> HYID_RANDOM_LENGTH 值建议不超过 6
 ### 代码示例
 ```php
 class User extends Model{
@@ -35,7 +35,7 @@ class User extends Model{
     public function toArray(){
         $data = parent::toArray();
 
-        $data['id'] = hyid()->encode($data['id'])
+        $data['id'] = hyid()->encode($data['id']);
         
         return $data;
     }
